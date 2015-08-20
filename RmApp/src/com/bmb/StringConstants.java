@@ -15,15 +15,14 @@ public class StringConstants {
 	private StringConstants() {
 	}
 
-	private static String getEclipsePath(){
-	    File file = new File("");
-	    File fir_parent = new File(file.getAbsolutePath());
-	    File sec_parent = new File(fir_parent.getAbsolutePath());
-	    File thi_parent = new File(sec_parent.getAbsolutePath());
-	    File fou_parent = new File(thi_parent.getAbsolutePath());
-	    System.out.println(fou_parent.getAbsolutePath());
-	    
-	    return fou_parent.getAbsolutePath();
+	public static String getEclipsePath() {
+		File file = new File("");
+		String fir_parent = file.getAbsolutePath();
+		if(fir_parent.length() > 26){
+			fir_parent = fir_parent.substring(0, fir_parent.length() - 26);
+		}
+
+		return fir_parent;
 	}
 	
 	public static boolean initProperties() {
@@ -31,7 +30,7 @@ public class StringConstants {
 		if(null == eclipsePath ||  eclipsePath.length()  < 1){
 			return false;
 		}
-		File file = new File(eclipsePath + File.separator + propertiesFileName);
+		File file = new File(eclipsePath + propertiesFileName);
 		if (file.exists()) {
 			BufferedReader bufferedReader = null;
 			InputStreamReader read = null;

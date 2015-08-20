@@ -15,15 +15,15 @@
       <perspective
             name="RCP Perspective"
             class="com.bmb.Perspective"
-            id="Bmb.perspective">
+            id="RmApp.perspective">
       </perspective>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
             defaultHandler="com.bmb.RmHandler"
-            id="rcpproject.commands.rmapp"
-            name="Rmapp">
+            id="rcpproject.commands.RmApp"
+            name="RmApp">
       </command>
    </extension>
    <extension
@@ -34,7 +34,7 @@
          <toolbar
                id="SayTime">
             <command
-                  commandId="rcpproject.commands.Time"
+                  commandId="rcpproject.commands.RmApp"
                   icon="icons/time.PNG"
                   style="push"
                   tooltip="start remove app">
@@ -51,9 +51,9 @@
                id="timeMenu"
                label="App">
             <command
-                  commandId="rcpproject.commands.Time"
+                  commandId="rcpproject.commands.RmApp"
                   icon="icons/time.PNG"
-                  label="Time"
+                  label="RmApp"
                   style="push"
                   tooltip="start remove App">
             </command>
