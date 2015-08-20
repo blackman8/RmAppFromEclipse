@@ -1,5 +1,5 @@
 # RmAppFromEclipse
-为eclipse提供意见删除定制App功能。
+为eclipse提供一键删除App功能。
 一：
     通过源码生成jar文件，放置于eclipse下的plugins目录中；
 二：
